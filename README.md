@@ -2,6 +2,8 @@
 
 MyCalendar is a modern web app for managing calendar tasks. Built with Next.js, React, Firebase, and Tailwind CSS, it provides a seamless, secure, and responsive experience for organizing your schedule.
 
+**Live Demo:** [https://my-calendar-o7ye.vercel.app](https://my-calendar-o7ye.vercel.app)
+
 ## Features
 
 - 📅 Interactive calendar with task management
