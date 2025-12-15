@@ -24,12 +24,12 @@ test.describe("Login Form", () => {
 });
 
 test.describe("Login Process", () => {
-  test("should allow access to profile after successful login", async ({
+  test("Should allow access to profile after successful login", async ({
     page,
   }) => {
     await page.goto("http://localhost:3000/user/signin");
 
-    await page.fill('input[type="email"]', "test@example.com");
+    await page.fill('input[type="email"]', "my.calendar@interia.com");
 
     await page.fill('input[type="password"]', "Test123!");
 
