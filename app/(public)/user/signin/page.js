@@ -8,14 +8,13 @@ import {
   signOut,
 } from "firebase/auth";
 import { getAuth } from "firebase/auth";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-export default function SignInPage() {
+export default function SignInPage({ searchParams }) {
   const auth = getAuth();
-  const params = useSearchParams();
   const router = useRouter();
-  const returnUrl = params.get("returnUrl");
+  const returnUrl = searchParams?.returnUrl;
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -38,11 +37,7 @@ export default function SignInPage() {
               return;
             }
 
-            if (returnUrl) {
-              router.push(returnUrl);
-            } else {
-              router.push("/");
-            }
+            router.push(returnUrl || "/");
           })
           .catch((error) => {
             let errorMessage = "Something went wrong. Please try again.";
