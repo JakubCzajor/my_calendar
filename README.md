@@ -26,6 +26,7 @@ MyCalendar is a modern web app for managing calendar tasks. Built with Next.js, 
 
 - Node.js 18+
 - npm (or yarn/pnpm/bun)
+- A Firebase project (for authentication and Firestore)
 
 ### Installation
 
@@ -40,6 +41,19 @@ MyCalendar is a modern web app for managing calendar tasks. Built with Next.js, 
    # or
    yarn install
    ```
+
+### Firebase Configuration
+
+Before running the app, you need to set up the following environment variables. Create a `.env` file in the root of the project and add your Firebase project credentials:
+
+```env
+NEXT_PUBLIC_API_KEY="<api-key-value>"
+NEXT_PUBLIC_AUTH_DOMAIN="<auth-domain-value>"
+NEXT_PUBLIC_PROJECT_ID="<project-id-value>"
+NEXT_PUBLIC_STORAGE_BUCKET="<storage-bucket-value>"
+NEXT_PUBLIC_MESSAGING_SENDER_ID="<messaging-sender-id-value>"
+NEXT_PUBLIC_APP_ID="<app-id-value>"
+```
 
 ### Running the App
 
